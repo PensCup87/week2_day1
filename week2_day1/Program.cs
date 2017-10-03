@@ -75,34 +75,83 @@ namespace week2_day1
             //studentAges[4] = 30;
             //studentAges[5] = 47;
 
-            string[] myLastName = new string[4];
-            myLastName[0] = "T";
-            myLastName[1] = "o";
-            myLastName[2] = "m";
-            myLastName[3] = "e";
+            //string[] myLastName = new string[4];
+            //myLastName[0] = "T";
+            //myLastName[1] = "o";
+            //myLastName[2] = "m";
+            //myLastName[3] = "e";
 
-            Console.WriteLine(myLastName.Length);
-            
-            string[] anArray = { "red", "black", "green", "orange", "gold" };
-            //Counts the number of Elements in the ARRAY USING LENGTH PROPERTY
-            //If you take the LENGTH of an Array -1 is the last Element
-            //Finding the 2nd to last Element of the Array with Length Property
+            //Console.WriteLine(myLastName.Length);
 
-            //.Length - 1 = Last Element Index
-            //[] indicate Index and Calculating the Lenght will cause an error
-            //because length is one more than index count
-            //to avoid errors use Length - 1
-            int index = anArray.Length;
-            index = index - 2;
-            Console.WriteLine(anArray[index]);
+            //string[] anArray = { "red", "black", "green", "orange", "gold" };
+            ////Counts the number of Elements in the ARRAY USING LENGTH PROPERTY
+            ////If you take the LENGTH of an Array -1 is the last Element
+            ////Finding the 2nd to last Element of the Array with Length Property
 
-            int arraySize = int.Parse(Console.ReadLine());
-            int[] newArray = new int[arraySize];
-            Console.WriteLine("The array length is " + newArray.Length);
-            //a number of array elements can be set, but in this example
-            //the user is determing the size of the array
-            //this can be used if a user is booking a dinner reservation and they know the number of guests
-            //this creates the array with their desired slots
+            ////.Length - 1 = Last Element Index
+            ////[] indicate Index and Calculating the Lenght will cause an error
+            ////because length is one more than index count
+            ////to avoid errors use Length - 1
+            //int index = anArray.Length;
+            //index = index - 2;
+            //Console.WriteLine(anArray[index]);
+
+            //int arraySize = int.Parse(Console.ReadLine());
+            //int[] newArray = new int[arraySize];
+            //Console.WriteLine("The array length is " + newArray.Length);
+            ////a number of array elements can be set, but in this example
+            ////the user is determing the size of the array
+            ////this can be used if a user is booking a dinner reservation and they know the number of guests
+            ////this creates the array with their desired slots
+
+            //Birth Month Example
+            string[] birthMonth = { "October", "July", "October", "May" };
+            Console.WriteLine(Array.IndexOf(birthMonth, "October"));
+            //prints out the first index apearance of a desired value
+            //Array.IndexOf -> calls the function  on the name of the Array (birthmonth) and desired Value (October)
+
+
+            int[] numbers = { 2, 5, 9, 4, 3, 4, 6, 5 };
+            Console.WriteLine(Array.LastIndexOf(numbers, 4));
+            //finds the last index of the the desired value
+            //the index flows left to right, but Array.LastIndexOf flows right to left
+            //output index is 5 because the first time 4 appears from right to left is in the 5th index
+            Array.Reverse(numbers);
+            //reverses the sequence the of the array
+            Console.WriteLine(numbers[0]);
+            //outputs 5 because 5 is now at the zero index
+            Array.Sort(numbers);
+            //Sorts the values of an array
+            Console.WriteLine(numbers[numbers.Length - 1]);
+            //printing out the last value in the Array
+            //(numbers[numbers.Length - 1])
+            //calls the numbers array; [calls the length method on the array to count the values; the -1 gets the last index]
+
+            //Last Do It Problems for Arrays
+            //1.
+            string[] firstNames = { "Beetljuice", "Hank", "High Pitch Eric", "Crazy Alice" };
+            Console.WriteLine(Array.IndexOf(firstNames, "High Pitch Eric"));
+
+            //2.
+            int[] luckyNumbers = {2, 4, 6, 8, 9, 19, 29, 9, 99 };
+            Console.WriteLine(Array.LastIndexOf(luckyNumbers, 9));
+
+            //3.
+            char[] singleLetters = { 'a', 'c', 'd', 'c', 'm', 'e', 't', 'a', 'l' };
+            //prints the value loacted at the first index of the array singleLetters
+            Console.WriteLine(singleLetters[1]);
+            //call the reverse function on the desired array
+            Array.Reverse(singleLetters);
+            //now printing the first index after the values have been reversed
+            Console.WriteLine(singleLetters[1]);
+
+            //4.
+            string[] sternStaff = { "Howard", "Fred", "Robin", "Gary", "Sal", "Richard", "Hein" };
+            Array.Sort(sternStaff);
+            Console.WriteLine(sternStaff[0] + " and " + sternStaff[sternStaff.Length - 1]);
+
+
+
 
 
 
