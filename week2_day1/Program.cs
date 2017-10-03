@@ -96,6 +96,14 @@ namespace week2_day1
             index = index - 2;
             Console.WriteLine(anArray[index]);
 
+            int arraySize = int.Parse(Console.ReadLine());
+            int[] newArray = new int[arraySize];
+            Console.WriteLine("The array length is " + newArray.Length);
+            //a number of array elements can be set, but in this example
+            //the user is determing the size of the array
+            //this can be used if a user is booking a dinner reservation and they know the number of guests
+            //this creates the array with their desired slots
+
 
 
         }
